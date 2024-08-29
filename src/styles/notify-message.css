@@ -1,0 +1,30 @@
+.notify-message {
+  position: fixed;
+  top: 120px;
+  right: 50px;
+  width: 300px;
+  background-color: #4cca12;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  transition: all 0.3s linear;
+  z-index: 9999;
+}
+
+.notify-message span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notify-message i {
+  font-size: 1.6rem;
+}
+
+.notify-message.notify-message__failure {
+  background-color: rgb(245, 97, 97);
+}
