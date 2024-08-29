@@ -21,7 +21,8 @@
     "remixicon": "^2.5.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^1.1.2",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "@babel/plugin-proposal-private-property-in-object": "^7.14.5"
   },
   "scripts": {
     "start": "react-scripts start",

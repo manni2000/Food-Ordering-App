@@ -18,56 +18,35 @@ const AllFoods = () => {
   const [pageNumber, setPageNumber] = useState(0);
 
   const searchedProduct = products.filter((item) => {
-    if (searchTerm.valueOf === '') {
+    if (searchTerm === '') {
       return item;
     }
     if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
       return item;
-    } else {
-      return console.log('not found');
     }
+    return null;
   });
 
   const sortedProduct = searchedProduct.sort((itemA, itemB) => {
     if (sortValue === 'ascending') {
-      const titleA = itemA.title.toUpperCase();
-      const titleB = itemB.title.toUpperCase();
-
-      if (titleA < titleB) {
-        return -1;
-      }
-      if (titleA > titleB) {
-        return 1;
-      }
-      return 0;
+      return itemA.title.localeCompare(itemB.title);
     }
-
     if (sortValue === 'descending') {
-      const titleA = itemA.title.toUpperCase();
-      const titleB = itemB.title.toUpperCase();
-
-      if (titleA < titleB) {
-        return 1;
-      }
-      if (titleA > titleB) {
-        return -1;
-      }
-      return 0;
+      return itemB.title.localeCompare(itemA.title);
     }
-
     if (sortValue === 'low-price') {
       return (
-        (itemA.price * (1 - Number(itemA.salePercent / 100))).toFixed(1) -
-        (itemB.price * (1 - Number(itemB.salePercent / 100))).toFixed(1)
+        itemA.price * (1 - itemA.salePercent / 100) -
+        itemB.price * (1 - itemB.salePercent / 100)
       );
     }
-
     if (sortValue === 'high-price') {
       return (
-        (itemB.price * (1 - Number(itemB.salePercent / 100))).toFixed(1) -
-        (itemA.price * (1 - Number(itemA.salePercent / 100))).toFixed(1)
+        itemB.price * (1 - itemB.salePercent / 100) -
+        itemA.price * (1 - itemA.salePercent / 100)
       );
     }
+    return 0; // Default case if no sort value is matched
   });
 
   const handleSortClick = (e) => {
@@ -106,7 +85,7 @@ const AllFoods = () => {
               </Col>
               <Col lg="6" md="6" sm="6" xs="12" className="mb-5">
                 <div className="sorting__widget text-end">
-                  <select className="w-50" onClick={(e) => handleSortClick(e)}>
+                  <select className="w-50" onClick={handleSortClick}>
                     <option>Default</option>
                     <option value="ascending">Alphabetically, A-Z</option>
                     <option value="descending">Alphabetically, Z-A</option>
@@ -132,7 +111,7 @@ const AllFoods = () => {
                   onPageChange={changePage}
                   previousLabel={'Prev'}
                   nextLabel={'Next'}
-                  containerClassName=" paginationBttns "
+                  containerClassName="paginationBttns"
                 />
               </div>
             </Row>
