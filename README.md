@@ -28,11 +28,11 @@ interact with.*
 1. **Clone the Repository**:
    - Open your terminal and run the following command to clone the repository:
      ```bash
-     git clone https://github.com/manni2000/Food-Order-App.git
+     git clone https://github.com/manni2000/Food-Ordering-App.git
      ```
    - Navigate into the project directory:
      ```bash
-     cd Food-Order-App
+     cd Food-Ordering-App
      ```
 
 2. **Install Dependencies**:
