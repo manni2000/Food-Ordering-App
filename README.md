@@ -17,7 +17,7 @@ interact with.*
 9. **JavaScript (ES6+)**: The logic and interactivity within the app are handled using modern JavaScript features.
 
 ### Functionality:
-  1. **User Registration and Authentication**
+### 1. **User Registration and Authentication**
    - **User Registration**: The system should allow new users to sign up by providing necessary information such as name, email, and password. Validation should be performed to ensure the uniqueness of the email and the strength of the password.
    - **User Authentication**: Existing users should be able to log in using their registered email and password. The system should securely manage and store user credentials, possibly using encryption and hashing techniques. Authentication should be robust, ensuring secure access to the application.
    - **Password Recovery**: Users should be able to recover their accounts in case they forget their passwords. This feature might include sending a password reset link to the user's email.
