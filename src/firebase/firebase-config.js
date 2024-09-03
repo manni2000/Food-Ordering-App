@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDlwwWkqzGFtE3DZKGrZ_oSldlGoKRCMLU',
-  authDomain: 'react-food-delivery-auth.firebaseapp.com',
-  projectId: 'react-food-delivery-auth',
-  storageBucket: 'react-food-delivery-auth.appspot.com',
-  messagingSenderId: '596637437270',
-  appId: '1:596637437270:web:a55b2505c7da8620481af7',
-  measurementId: 'G-K1WHBHG9K2',
+  apiKey: "AIzaSyBrSbmkT4iQh-h0HMxMaJarDATijgRTggw",
+  authDomain: "react-food-ordering-app-9a183.firebaseapp.com",
+  projectId: "react-food-ordering-app-9a183",
+  storageBucket: "react-food-ordering-app-9a183.appspot.com",
+  messagingSenderId: "173178612693",
+  appId: "1:173178612693:web:6648149e28384788c52b5c",
+  measurementId: "G-V68JNMVY6D"
 };
 
 const app = initializeApp(firebaseConfig);
