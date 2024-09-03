@@ -17,12 +17,33 @@ interact with.*
 9. **JavaScript (ES6+)**: The logic and interactivity within the app are handled using modern JavaScript features.
 
 ### Functionality:
-1. **User Registration and Authentication**: Users can sign up and log in using Firebase Authentication. The application supports user sessions, allowing users to remain logged in.
-2. **Product Listing**: The app displays a list of available food items that users can browse.
-3. **Shopping Cart**: Users can add items to their cart, view their selected items, and proceed to checkout.
-4. **Order Management**: Users can place orders and manage their cart, with a summary of the items and total cost.
-5. **Category Filtering**: The application allows users to filter food items based on categories like Burger, Pizza, Bread, etc.
-6. **Reviews and Ratings:** Users can leave reviews and ratings for food items, which helps other users make informed decisions.
+### 1. **User Registration and Authentication**
+   - **User Registration**: The system should allow new users to sign up by providing necessary information such as name, email, and password. Validation should be performed to ensure the uniqueness of the email and the strength of the password.
+   - **User Authentication**: Existing users should be able to log in using their registered email and password. The system should securely manage and store user credentials, possibly using encryption and hashing techniques. Authentication should be robust, ensuring secure access to the application.
+   - **Password Recovery**: Users should be able to recover their accounts in case they forget their passwords. This feature might include sending a password reset link to the user's email.
+
+### 2. **User Roles (Admin, Restaurant Owners, Customers)**
+   - **Admin**: The admin role should have access to all functionalities within the application. This includes managing all users, overseeing restaurant owners, managing menus across restaurants, monitoring orders, and viewing system-wide analytics. Admins can also moderate or manage reviews and ratings.
+   - **Restaurant Owners**: Restaurant owners should have access to functionalities that allow them to manage their own restaurants. This includes managing menus, handling orders, and viewing reviews and ratings specific to their restaurants. They should not have access to the data or functionality of other restaurant owners.
+   - **Customers**: Customers should be able to browse menus, place orders, and leave reviews and ratings. They should have access to their order history, profile management, and the ability to edit or delete their reviews.
+
+### 3. **Menu Management**
+   - **Create and Update Menu Items**: Restaurant owners should be able to add new items to their menus and update existing ones. This includes specifying item details such as name, description, price, and availability.
+   - **Menu Organization**: The menu should be organized categorically (e.g., Appetizers, Main Courses, Desserts). The system should allow restaurant owners to easily categorize items and update categories as needed.
+   - **Menu Visibility**: Restaurant owners should be able to control the visibility of menu items, enabling or disabling items as required.
+
+### 4. **Order Management**
+   - **Order Placement**: Customers should be able to place orders by selecting items from the menu. The system should facilitate the process of selecting items, reviewing the order, and finalizing the purchase.
+   - **Order Tracking**: Customers should be able to track the status of their orders in real-time. Statuses could include stages such as "Order Received," "Preparing," "Out for Delivery," and "Delivered."
+   - **Order History**: Customers should have access to their order history, allowing them to view past orders, reorder items, and review order details.
+   - **Order Management for Restaurant Owners**: Restaurant owners should have tools to manage incoming orders, update order statuses, and notify customers of the progress.
+
+### 5. **Reviews and Ratings**
+   - **Customer Reviews and Ratings**: Customers should be able to leave reviews and ratings for the restaurants they have ordered from. This feature should allow customers to provide feedback on individual menu items and overall service.
+   - **Moderation of Reviews**: Admins and possibly restaurant owners should have the ability to moderate reviews. This includes the ability to remove inappropriate or false reviews.
+   - **Displaying Reviews and Ratings**: Reviews and ratings should be visible to other customers, providing insights into the quality of the food and service. An average rating should be calculated and displayed alongside the restaurant or menu items.
+
+**This project is made by all requirements**
 
 ### Steps to Run Locally:
 1. **Clone the Repository**:
